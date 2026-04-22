@@ -1,7 +1,7 @@
 /* Style nav bar links like portfolio buttons for consistency */
 /* Top nav bar links styled as buttons for full consistency */
 .nav-links a {
-    background: var(--colour-primary, #2c3e50);
+    background: var(--colour-accent, #e67e22);
     color: #fff !important;
     padding: 0.5em 1.3em;
     border: none;
@@ -12,13 +12,14 @@
     margin: 0 0.3em;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     display: inline-block;
-    box-shadow: 0 2px 8px rgba(44,62,80,0.08);
+    box-shadow: 0 2px 8px rgba(230,103,34,0.08);
     cursor: pointer;
 }
 .nav-links a:hover, .nav-links a.active {
-    background: var(--colour-accent, #e67e22);
-    color: #fff;
+    background: #fff;
+    color: var(--colour-accent, #e67e22) !important;
     box-shadow: 0 4px 16px rgba(230,103,34,0.12);
+    border: 2px solid var(--colour-accent, #e67e22);
 }
 /* Portfolio navigation buttons (bottom of C++ Projects page) */
 .portfolio-btn {
