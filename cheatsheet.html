@@ -32,27 +32,228 @@
     <!-- ===== Main Content ===== -->
     <main>
         <div class="page-hero">
-            <!-- TODO: Update heading to "HTML Cheat Sheet", "CSS Cheat Sheet", or "JavaScript Cheat Sheet" -->
-            <h1>Cheat Sheet</h1>
-            <p>My personal quick-reference notes</p>
+            <h1>JavaScript Cheat Sheet</h1>
+            <p>My personal quick-reference notes for JavaScript</p>
         </div>
 
-        <!-- At least 15 entries are required for full marks.
-             Each <section> below represents one entry/topic.
-             Duplicate the pattern as needed. -->
-
+        <!-- 1 -->
         <section class="cheat-entry">
-            <h2><!-- TODO: Topic name (e.g. &lt;a&gt; tag) --></h2>
-            <!-- TODO: Description, code snippet, notes -->
+            <h2>1. Variables — var, let, const</h2>
+            <p>Three ways to declare variables. Prefer <code>const</code> by default, use <code>let</code> when the value needs to change, and avoid <code>var</code> (function-scoped and hoisted in confusing ways).</p>
+            <pre><code>const name = "Jordan";   // cannot be reassigned
+let score = 0;           // can be reassigned
+var old = true;          // avoid — function-scoped</code></pre>
         </section>
 
-        <!-- Add more entries here ... -->
+        <!-- 2 -->
+        <section class="cheat-entry">
+            <h2>2. Data Types</h2>
+            <p>JavaScript has 7 primitive types plus objects.</p>
+            <pre><code>typeof "hello"      // "string"
+typeof 42           // "number"
+typeof true         // "boolean"
+typeof undefined    // "undefined"
+typeof null         // "object" (quirk!)
+typeof Symbol()     // "symbol"
+typeof 9n           // "bigint"
+typeof {}           // "object"
+typeof []           // "object"</code></pre>
+        </section>
+
+        <!-- 3 -->
+        <section class="cheat-entry">
+            <h2>3. Functions</h2>
+            <p>Functions can be declared, expressed, or written as arrow functions.</p>
+            <pre><code>// Declaration
+function greet(name) {
+    return "Hello, " + name;
+}
+
+// Arrow function (concise)
+const greet = (name) => "Hello, " + name;
+
+// Call it
+console.log(greet("Jordan")); // Hello, Jordan</code></pre>
+        </section>
+
+        <!-- 4 -->
+        <section class="cheat-entry">
+            <h2>4. if / else / else if</h2>
+            <p>Conditional logic — run different code depending on a condition.</p>
+            <pre><code>const temp = 15;
+
+if (temp > 25) {
+    console.log("Hot day");
+} else if (temp >= 10) {
+    console.log("Nice day");
+} else {
+    console.log("Cold day");
+}</code></pre>
+        </section>
+
+        <!-- 5 -->
+        <section class="cheat-entry">
+            <h2>5. for Loop</h2>
+            <p>Repeat code a set number of times.</p>
+            <pre><code>for (let i = 0; i &lt; 5; i++) {
+    console.log("Count: " + i);
+}
+// Prints Count: 0 through Count: 4</code></pre>
+        </section>
+
+        <!-- 6 -->
+        <section class="cheat-entry">
+            <h2>6. while Loop</h2>
+            <p>Repeat code while a condition is true. Make sure the condition eventually becomes false or you get an infinite loop.</p>
+            <pre><code>let count = 0;
+while (count &lt; 3) {
+    console.log(count);
+    count++;
+}
+// Prints 0, 1, 2</code></pre>
+        </section>
+
+        <!-- 7 -->
+        <section class="cheat-entry">
+            <h2>7. Arrays</h2>
+            <p>An ordered list of values. Zero-indexed.</p>
+            <pre><code>const cats = ["Luna", "Mochi", "Pixel"];
+console.log(cats[0]);       // "Luna"
+cats.push("Noodle");        // add to end
+cats.pop();                 // remove last
+console.log(cats.length);   // 3</code></pre>
+        </section>
+
+        <!-- 8 -->
+        <section class="cheat-entry">
+            <h2>8. Objects</h2>
+            <p>A collection of key-value pairs. Use dot notation or bracket notation to access properties.</p>
+            <pre><code>const cat = {
+    name: "Luna",
+    age: 4,
+    isSpayed: true
+};
+
+console.log(cat.name);       // "Luna"
+console.log(cat["age"]);     // 4</code></pre>
+        </section>
+
+        <!-- 9 -->
+        <section class="cheat-entry">
+            <h2>9. DOM Selection</h2>
+            <p>Get references to HTML elements so JavaScript can read or change them.</p>
+            <pre><code>// By ID
+const btn = document.getElementById("myBtn");
+
+// By CSS selector (first match)
+const title = document.querySelector("h1");
+
+// All matches
+const items = document.querySelectorAll(".nav-link");</code></pre>
+        </section>
+
+        <!-- 10 -->
+        <section class="cheat-entry">
+            <h2>10. Event Listeners</h2>
+            <p>Run code when the user does something (click, keypress, input change, etc.).</p>
+            <pre><code>const btn = document.getElementById("myBtn");
+
+btn.addEventListener("click", function() {
+    alert("Button clicked!");
+});
+
+// Arrow function version
+btn.addEventListener("click", () => alert("Clicked!"));</code></pre>
+        </section>
+
+        <!-- 11 -->
+        <section class="cheat-entry">
+            <h2>11. Changing DOM Content &amp; Style</h2>
+            <p>Update text, HTML, or CSS of an element from JavaScript.</p>
+            <pre><code>const heading = document.querySelector("h1");
+
+heading.textContent = "New Title";       // change text
+heading.innerHTML = "&lt;em&gt;Italic Title&lt;/em&gt;"; // change HTML
+
+heading.style.color = "red";             // inline style
+heading.classList.add("highlight");      // add CSS class
+heading.classList.remove("highlight");   // remove CSS class
+heading.classList.toggle("active");      // toggle CSS class</code></pre>
+        </section>
+
+        <!-- 12 -->
+        <section class="cheat-entry">
+            <h2>12. Template Literals</h2>
+            <p>Back-tick strings that allow embedded expressions — much cleaner than string concatenation.</p>
+            <pre><code>const name = "Jordan";
+const score = 95;
+
+// Old way
+console.log("Hi " + name + ", your score is " + score);
+
+// Template literal
+console.log(`Hi ${name}, your score is ${score}`);</code></pre>
+        </section>
+
+        <!-- 13 -->
+        <section class="cheat-entry">
+            <h2>13. Array Methods — forEach, map, filter</h2>
+            <p>Higher-order methods for working with arrays without writing manual loops.</p>
+            <pre><code>const nums = [1, 2, 3, 4, 5];
+
+// forEach — run code for each item
+nums.forEach(n => console.log(n));
+
+// map — transform each item, return new array
+const doubled = nums.map(n => n * 2); // [2,4,6,8,10]
+
+// filter — keep items that pass the test
+const evens = nums.filter(n => n % 2 === 0); // [2,4]</code></pre>
+        </section>
+
+        <!-- 14 -->
+        <section class="cheat-entry">
+            <h2>14. console.log &amp; Debugging</h2>
+            <p>Essential tools for inspecting values and finding bugs. Open DevTools with F12 in any browser.</p>
+            <pre><code>console.log("Hello");           // print a value
+console.warn("Watch out!");     // yellow warning
+console.error("Something broke!"); // red error
+console.table([{a:1},{a:2}]);   // table view
+
+// Pause execution in DevTools
+debugger;</code></pre>
+        </section>
+
+        <!-- 15 -->
+        <section class="cheat-entry">
+            <h2>15. Ternary Operator</h2>
+            <p>A compact one-line if/else. Format: <code>condition ? valueIfTrue : valueIfFalse</code></p>
+            <pre><code>const age = 20;
+const status = age >= 18 ? "adult" : "minor";
+console.log(status); // "adult"
+
+// Equivalent if/else:
+// if (age >= 18) { status = "adult"; } else { status = "minor"; }</code></pre>
+        </section>
+
+        <!-- 16 (bonus) -->
+        <section class="cheat-entry">
+            <h2>16. Null &amp; Undefined</h2>
+            <p><code>undefined</code> means a variable was declared but never assigned. <code>null</code> is an intentional "no value".</p>
+            <pre><code>let x;
+console.log(x);          // undefined
+
+let y = null;
+console.log(y);          // null
+console.log(y == null);  // true
+console.log(y === null); // true (strict)</code></pre>
+        </section>
 
     </main>
 
     <!-- ===== Footer ===== -->
     <footer>
-        <p>&copy; 2026 Jordan C. — TECH1101 Final Project</p>
+        <p>&copy; 2026 Jordan Champagne — TECH1101 Final Project</p>
     </footer>
 
     <script src="js/main.js"></script>

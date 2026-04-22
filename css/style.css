@@ -451,3 +451,65 @@ footer {
         font-size: 1.3rem;
     }
 }
+
+/* ============================================================
+   Responsive Images
+   ============================================================ */
+.content-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* ============================================================
+   Cheat Sheet Entries
+   ============================================================ */
+.cheat-entry {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e2e8f0);
+    border-left: 4px solid var(--accent, #f59e0b);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cheat-entry h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--heading, #1e293b);
+}
+
+.cheat-entry p {
+    margin-bottom: 0.75rem;
+    color: var(--text, #334155);
+}
+
+/* Code block styling */
+.cheat-entry pre {
+    background: #1e293b;
+    color: #e2e8f0;
+    border-radius: 6px;
+    padding: 1rem 1.25rem;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.cheat-entry code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9em;
+    background: #f1f5f9;
+    color: #0f172a;
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+}
+
+/* Inside a pre block, reset inline code styles */
+.cheat-entry pre code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    font-size: inherit;
+}
