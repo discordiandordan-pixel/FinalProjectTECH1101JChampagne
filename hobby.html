@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interests | Jordan's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JC</a>
+
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Interests</a></li>
+                <li><a href="cheatsheet.html">Cheat Sheet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+        <div class="page-hero">
+            <h1>MEOW Foundation &amp; TNR</h1>
+            <p>Volunteering, feral cat care, and Trap-Neuter-Return in our community</p>
+        </div>
+
+        <!-- ---- About MEOW Foundation ---- -->
+        <section id="about-meow">
+            <h2>About MEOW Foundation</h2>
+            <p>
+                The <strong>MEOW Foundation</strong> is a Calgary-based, no-kill cat rescue organisation dedicated
+                to rescuing homeless cats and kittens and finding them loving homes. They also support community
+                members who care for feral and stray cat colonies through their
+                <strong>Trap-Neuter-Return (TNR)</strong> program.
+            </p>
+            <p>
+                <!-- TODO: Add a photo of a MEOW Foundation cat or logo here if you have one, e.g.:
+                <img src="images/meow-logo.png" alt="MEOW Foundation logo"> -->
+            </p>
+        </section>
+
+        <!-- ---- What is TNR? ---- -->
+        <section id="what-is-tnr">
+            <h2>What is Trap-Neuter-Return (TNR)?</h2>
+            <p>
+                TNR is the most humane and effective strategy for managing feral cat populations.
+                The process works in three steps:
+            </p>
+            <ol class="tnr-steps">
+                <li><strong>Trap</strong> &mdash; Humanely trap feral cats using live traps</li>
+                <li><strong>Neuter / Spay</strong> &mdash; Cats are taken to a vet or clinic for sterilisation and health checks</li>
+                <li><strong>Return</strong> &mdash; Cats are returned to their outdoor colony once recovered</li>
+            </ol>
+
+            <!-- Benefits comparison table -->
+            <table class="tnr-table">
+                <caption>Why TNR works</caption>
+                <thead>
+                    <tr>
+                        <th>Challenge</th>
+                        <th>Without TNR</th>
+                        <th>With TNR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Population growth</td>
+                        <td>Continues to increase</td>
+                        <td>Stabilises and declines over time</td>
+                    </tr>
+                    <tr>
+                        <td>Community nuisance behaviours</td>
+                        <td>Yowling, fighting, spraying</td>
+                        <td>Significantly reduced</td>
+                    </tr>
+                    <tr>
+                        <td>Animal welfare</td>
+                        <td>Lethal removal causes suffering</td>
+                        <td>Humane — cats live out natural lives</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ---- Our Involvement ---- -->
+        <section id="our-involvement">
+            <h2>Our Involvement</h2>
+            <p>
+                My wife and I are volunteer colony caretakers. We regularly feed the feral cats in our
+                area and coordinate with MEOW Foundation to trap cats for spay/neuter appointments.
+                After recovery, the cats are returned to the colony where we continue to monitor and
+                care for them.
+            </p>
+            <!-- TODO: Add personal photos of colony cats here if desired -->
+        </section>
+
+        <!-- ---- Trapping Temperature Checker ---- -->
+        <section id="trap-checker">
+            <h2>Is It Safe to Trap Today?</h2>
+            <p>
+                Temperature extremes can make trapping unsafe for feral cats. Use this tool to check
+                whether current conditions are within the recommended trapping range.
+            </p>
+
+            <div class="temp-checker-card">
+                <div class="temp-input-row">
+                    <label for="temp-input">Current Temperature:</label>
+                    <input
+                        type="number"
+                        id="temp-input"
+                        placeholder="e.g. 12"
+                        aria-label="Enter current temperature"
+                    >
+                    <select id="temp-unit" aria-label="Temperature unit">
+                        <option value="C">&deg;C</option>
+                        <option value="F">&deg;F</option>
+                    </select>
+                    <button id="check-temp-btn" class="btn-primary">Check</button>
+                </div>
+
+                <!-- Result is injected here by JavaScript -->
+                <div id="temp-result" class="temp-result" aria-live="polite" hidden></div>
+
+                <!-- Show the current thresholds so users understand the logic -->
+                <p class="temp-note" id="temp-threshold-note"></p>
+            </div>
+        </section>
+
+        <!-- ---- References ---- -->
+        <section id="references">
+            <h2>References</h2>
+            <ul>
+                <li>
+                    MEOW Foundation. (n.d.). <em>About MEOW Foundation</em>.
+                    <a href="https://www.meowfoundation.com" target="_blank" rel="noopener">meowfoundation.com</a>.
+                    Accessed April 2026.
+                </li>
+                <!-- TODO: Add citations for any images or additional facts used -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>&copy; 2026 Jordan C. — TECH1101 Final Project</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

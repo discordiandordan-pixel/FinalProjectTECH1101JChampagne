@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Jordan's Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">JC</a>
+
+            <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="hobby.html">Interests</a></li>
+                <li><a href="cheatsheet.html">Cheat Sheet</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+        <div class="page-hero">
+            <h1>Jordan C.</h1>
+            <p>MET Student &mdash; Design &amp; Automation &mdash; Robotics &amp; Technology</p>
+        </div>
+
+        <!-- ---- Contact ---- -->
+        <section id="contact-info">
+            <h2>Contact</h2>
+            <ul class="contact-list">
+                <!-- TODO: Replace placeholders with real contact details -->
+                <li><strong>Email:</strong> <!-- your email --></li>
+                <li><strong>Location:</strong> <!-- city, province --></li>
+                <li><strong>LinkedIn:</strong> <!-- URL --></li>
+                <li><strong>GitHub:</strong> <!-- URL --></li>
+            </ul>
+        </section>
+
+        <!-- ---- Education ---- -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="resume-card">
+                <h3>Diploma &mdash; Manufacturing Engineering Technology (MET)</h3>
+                <span class="resume-meta">Major: Design &amp; Automation &nbsp;|&nbsp; <!-- School name --> &nbsp;|&nbsp; <!-- Year --></span>
+                <ul>
+                    <li>Coursework covering PLC programming, robotics, CAD/CAM, and automation systems</li>
+                    <li>Applied hands-on experience with ABB industrial robots and HMI development</li>
+                    <!-- TODO: Add any awards, GPA, notable courses -->
+                </ul>
+            </div>
+        </section>
+
+        <!-- ---- Technical Skills ---- -->
+        <section id="skills">
+            <h2>Technical Skills</h2>
+
+            <!-- Table layout lets the rubric see an organizing element -->
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Skills &amp; Tools</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Programming</td>
+                        <td>C++, HTML, CSS, JavaScript</td>
+                    </tr>
+                    <tr>
+                        <td>CAD &amp; 3D Printing</td>
+                        <td><!-- TODO: e.g. SolidWorks, AutoCAD, Fusion 360, FDM printing, slicing software --></td>
+                    </tr>
+                    <tr>
+                        <td>Robotics &amp; Automation</td>
+                        <td>ABB Robots (RAPID), PLC Programming, HMI Development</td>
+                    </tr>
+                    <tr>
+                        <td>Web Development</td>
+                        <td>Responsive design, DOM manipulation, VS Code</td>
+                    </tr>
+                    <!-- TODO: Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ---- Experience ---- -->
+        <section id="experience">
+            <h2>Experience</h2>
+            <!-- Duplicate .resume-card for each position -->
+            <div class="resume-card">
+                <h3><!-- TODO: Job Title --></h3>
+                <span class="resume-meta"><!-- Company --> &nbsp;|&nbsp; <!-- Date range --></span>
+                <ul>
+                    <li><!-- Responsibility / achievement --></li>
+                    <li><!-- Responsibility / achievement --></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ---- Projects & Portfolio ---- -->
+        <section id="projects">
+            <h2>Projects &amp; Portfolio</h2>
+            <div class="card-grid">
+
+                <!-- C++ Project Card -->
+                <div class="project-card">
+                    <div class="project-card__icon">&#60;/&#62;</div>
+                    <h3>C++ Programming</h3>
+                    <p><!-- TODO: Describe a C++ project, e.g. data structures assignment, automation tool, etc. --></p>
+                    <!-- Optional: <a href="#">View on GitHub</a> -->
+                </div>
+
+                <!-- CAD / 3D Printing Card -->
+                <div class="project-card">
+                    <div class="project-card__icon">&#9632;</div>
+                    <h3>CAD &amp; 3D Printing</h3>
+                    <p><!-- TODO: Describe a CAD/3D print project — part design, tolerances, material, etc. --></p>
+                    <!-- Optional: add an <img> of your print here -->
+                </div>
+
+                <!-- Robotics Card -->
+                <div class="project-card">
+                    <div class="project-card__icon">&#9881;</div>
+                    <h3>Robotics</h3>
+                    <p><!-- TODO: Describe ABB robot work, RAPID programming, pick-and-place tasks, etc. --></p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <p>&copy; 2026 Jordan C. — TECH1101 Final Project</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
