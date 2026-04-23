@@ -54,12 +54,9 @@ if (navToggle && navLinks) {
    range recommended for humanely trapping feral cats.
    ============================================================ */
 
-// ------------------------------------------------------------------
-// TODO: Replace these threshold values once you have the parameters.
-//       All values are stored in Celsius internally.
-// ------------------------------------------------------------------
-const TRAP_MIN_C = 2;    // TODO: minimum safe trapping temperature (°C)
-const TRAP_MAX_C = 27;   // TODO: maximum safe trapping temperature (°C)
+// Safe trapping temperature range based on City of Calgary guidelines (Celsius).
+const TRAP_MIN_C = 2;    // Minimum safe trapping temperature (°C)
+const TRAP_MAX_C = 27;   // Maximum safe trapping temperature (°C)
 
 /**
  * Converts Fahrenheit to Celsius.
