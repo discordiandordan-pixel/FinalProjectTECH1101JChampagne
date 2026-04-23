@@ -251,9 +251,13 @@
             modes.push(sorted[sorted.length - 1]);
         }
 
-        const modeStr = (maxCount === 1 || modes.length === sorted.length)
-            ? 'none'
-            : modes.join(', ');
+        const uniqueModes = [...new Set(modes)];
+        let modeStr = 'none';
+        if (maxCount > 1 && uniqueModes.length > 0) {
+            modeStr = uniqueModes.length > 1
+                ? `multimodal: ${uniqueModes.join(', ')}`
+                : String(uniqueModes[0]);
+        }
 
         // Display results
         document.getElementById('res-mean').textContent   = mean % 1 === 0 ? mean : mean.toFixed(4).replace(/\.?0+$/, '');
