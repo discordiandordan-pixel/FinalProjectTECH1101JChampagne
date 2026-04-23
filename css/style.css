@@ -42,7 +42,8 @@
 }
 
 /* Current page in footer project nav */
-.portfolio-btn--active {
+a.portfolio-btn.portfolio-btn--active,
+button.portfolio-btn.portfolio-btn--active {
     color: var(--colour-accent, #e67e22) !important;
     pointer-events: none;
     cursor: default;
