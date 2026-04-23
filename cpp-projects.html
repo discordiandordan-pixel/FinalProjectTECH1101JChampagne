@@ -101,7 +101,7 @@
                 <p id="stats-err2" style="color:#ff6b6b;margin:0.75rem 0 0;min-height:1.4em;"></p>
                 <div style="margin-top:1.25rem;display:flex;gap:0.75rem;flex-wrap:wrap;">
                     <button class="portfolio-btn" onclick="statsCalculate()">Analyze</button>
-                    <button class="portfolio-btn" onclick="statsReset()" style="background:#1a252f;">Back</button>
+                    <button class="portfolio-btn modal-btn--secondary" onclick="statsReset()">Back</button>
                 </div>
             </div>
 
@@ -354,6 +354,40 @@
         text-align: right;
     }
 
+    /* Secondary/back modal buttons — outlined orange, no fill */
+    .modal-btn--secondary {
+        background: transparent !important;
+        border: 2px solid #e67e22 !important;
+        color: #e67e22 !important;
+    }
+    .modal-btn--secondary:hover {
+        background: #e67e22 !important;
+        color: #2c3e50 !important;
+    }
+
+    /* Modal action buttons (Next, Analyze, Calculate Again, etc.) — match filled orange Yes/No style */
+    #bus-overlay .portfolio-btn,
+    #stats-overlay .portfolio-btn,
+    #days-overlay .portfolio-btn {
+        background: #e67e22;
+        border: 2px solid #e67e22;
+        color: #ffffff;
+    }
+    #bus-overlay .portfolio-btn:hover,
+    #stats-overlay .portfolio-btn:hover,
+    #days-overlay .portfolio-btn:hover {
+        background: #ffffff;
+        color: #e67e22 !important;
+    }
+
+    /* Secondary button hover — must come after scoped rule to win the specificity battle */
+    #bus-overlay .modal-btn--secondary:hover,
+    #stats-overlay .modal-btn--secondary:hover,
+    #days-overlay .modal-btn--secondary:hover {
+        background: #e67e22 !important;
+        color: #2c3e50 !important;
+    }
+
     /* Tighten cells on narrow viewports */
     @media (max-width: 480px) {
         #days-picker button { padding: 0.5rem 0.1rem; }
@@ -385,8 +419,12 @@
                     View Price Rules
                 </summary>
                 <div style="padding:0.25rem 0.8rem 0.8rem;overflow-x:auto;">
-                    <p style="margin:0.25rem 0 0.6rem;color:#ffffff;font-size:0.82rem;line-height:1.35;">
-                        <strong><em>Age key:</em></strong> <strong>Child 0-5, Youth 6-17, Adult 18-64, Senior 65+</strong>
+                    <p style="margin:0.25rem 0 0.6rem;font-size:0.82rem;line-height:1.8;display:flex;flex-wrap:wrap;align-items:center;gap:0.35rem;">
+                        <span style="color:#e67e22;font-weight:600;margin-right:0.15rem;">Age key:</span>
+                        <span style="background:#1a252f;border:1px solid #e67e22;border-radius:4px;padding:1px 7px;color:#ffffff;">Child 0–5</span>
+                        <span style="background:#1a252f;border:1px solid #e67e22;border-radius:4px;padding:1px 7px;color:#ffffff;">Youth 6–17</span>
+                        <span style="background:#1a252f;border:1px solid #e67e22;border-radius:4px;padding:1px 7px;color:#ffffff;">Adult 18–64</span>
+                        <span style="background:#1a252f;border:1px solid #e67e22;border-radius:4px;padding:1px 7px;color:#ffffff;">Senior 65+</span>
                     </p>
                     <table class="bus-rules-table" style="width:100%;border-collapse:collapse;color:#cccccc;font-size:0.84rem;line-height:1.4;">
                         <thead>
