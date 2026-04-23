@@ -9,7 +9,7 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;
-    margin: 0 0.3em;
+    margin: 0 0.5em;
     transition: background 0.2s, color 0.2s, box-shadow 0.2s;
     display: inline-block;
     box-shadow: 0 2px 8px rgba(230,103,34,0.08);
