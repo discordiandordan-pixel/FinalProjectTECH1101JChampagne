@@ -191,8 +191,12 @@ footer {
     background-color: var(--colour-footer-bg);
     color: var(--colour-footer-text);
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
 }
 
 .return-top-btn {
@@ -279,6 +283,30 @@ footer {
 }
 #float-top-btn:hover {
     background: var(--colour-primary, #2c3e50);
+}
+
+/* Skills section headings & lists */
+.skills-section {
+    margin-bottom: 1.5rem;
+}
+
+.skills-section h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.skills-section h2:first-child {
+    margin-top: 0;
+}
+
+.skills-list {
+    padding-left: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.skills-list li {
+    margin-bottom: 0.4rem;
+    line-height: 1.6;
 }
 
 /* ============================================================
