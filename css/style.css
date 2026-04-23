@@ -11,7 +11,11 @@
    AI Assistance: GitHub Copilot used for code suggestions and debugging.
    ============================================================ */
 
-/* Top nav bar links styled as buttons for full consistency */
+/* ============================================================
+   Navigation & Button Overrides
+   These rules override the base nav-link styles defined later
+   in the file to make all nav links render as styled buttons.
+   ============================================================ */
 .nav-links a {
     background: var(--colour-accent, #e67e22);
     color: #fff !important;
@@ -61,11 +65,6 @@ button.portfolio-btn.portfolio-btn--active {
     cursor: default;
     opacity: 1;
 }
-/* ============================================================
-   style.css — Shared stylesheet for Jordan's Personal Website
-   TECH1101 Final Project
-   ============================================================ */
-
 /* ---------- CSS Reset & Base ---------- */
 *, *::before, *::after {
     box-sizing: border-box;
