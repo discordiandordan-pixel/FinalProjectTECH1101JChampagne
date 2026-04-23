@@ -57,10 +57,10 @@ if (navToggle && navLinks) {
 })();
 
 /* ============================================================
-   Trapping Temperature Checker (hobby.html)
-   Checks whether the current temperature is within the safe
-   range recommended for humanely trapping feral cats.
-   ============================================================ */
+    Trapping Temperature Checker (meow-tnr.html)
+    Checks whether the current temperature is within the safe
+    range recommended for humanely trapping feral cats.
+    ============================================================ */
 
 // Safe trapping temperature range based on City of Calgary guidelines (Celsius).
 const TRAP_MIN_C = 2;    // Minimum safe trapping temperature (°C)
